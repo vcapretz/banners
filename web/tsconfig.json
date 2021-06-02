@@ -1,8 +1,18 @@
 {
   "extends": "../api/tsconfig.json",
   "compilerOptions": {
-    "module": "ESNext",
-    "outDir": "../public/dist"
+    "lib": ["es5", "es2015.promise", "dom", "es2015"],
+    "target": "es5",
+    "jsx": "react",
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "outDir": "../public/dist",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "sourceMap": true,
+    "esModuleInterop": true
   },
   "include": ["./"]
 }

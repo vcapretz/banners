@@ -1,5 +1,3 @@
-import type { ParsedRequest } from "../api/_lib/types";
-
 const { H, R, copee } = window as any;
 let timeout = -1;
 
@@ -90,11 +88,14 @@ const Toast = ({ show, message }: ToastProps) => {
   );
 };
 
-interface AppState extends ParsedRequest {
+interface AppState {
   loading: boolean;
   showToast: boolean;
   messageToast: string;
   overrideUrl: URL | null;
+  text: string;
+  packageName: string;
+  description: string;
 }
 
 type SetState = (state: Partial<AppState>) => void;
@@ -200,5 +201,3 @@ const App = (_: any, state: AppState, setState: SetState) => {
 };
 
 R(H(App), document.getElementById("app"));
-
-export default App;
