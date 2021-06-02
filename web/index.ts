@@ -122,7 +122,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
     overrideUrl = null,
   } = state;
   const url = new URL(window.location.origin);
-  url.pathname = `${encodeURIComponent(text)}.png`;
+  url.pathname = encodeURIComponent(text);
   url.searchParams.append("packageName", packageName);
   url.searchParams.append("description", description);
 
