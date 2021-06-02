@@ -1,4 +1,4 @@
-import { ParsedRequest } from "../api/_lib/types";
+import type { ParsedRequest } from "../api/_lib/types";
 
 const { H, R, copee } = window as any;
 let timeout = -1;
@@ -94,9 +94,6 @@ interface AppState extends ParsedRequest {
   loading: boolean;
   showToast: boolean;
   messageToast: string;
-  selectedImageIndex: number;
-  widths: string[];
-  heights: string[];
   overrideUrl: URL | null;
 }
 
@@ -203,3 +200,5 @@ const App = (_: any, state: AppState, setState: SetState) => {
 };
 
 R(H(App), document.getElementById("app"));
+
+export default App;
