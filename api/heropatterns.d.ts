@@ -1,2 +1,2 @@
-declare module 'hero-patterns';
-declare module 'heroicons';
+declare module "hero-patterns";
+declare module "heroicons";
